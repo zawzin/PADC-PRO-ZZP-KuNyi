@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/lblAddInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center_horizontal"
+            android:text="Your Information"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_heading_2x" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilPhone"
+            style="@style/styleTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblAddInfo"
+            android:hint="Phone no">
+
+            <EditText
+                android:id="@+id/etPhone"
+                style="@style/styleEditText"
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilAge"
+            style="@style/styleTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tilPhone"
+            android:hint="Age">
+
+            <EditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/styleEditText"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:layout_below="@id/tilAge"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_regular_2x" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_regular_2x"
+                android:layout_marginLeft="@dimen/margin_medium_2"/>
+        </RadioGroup>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilSkill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Skills"
+            android:layout_below="@id/rgGender"
+            style="@style/styleTextInputLayout">
+            <EditText
+                android:id="@+id/etSkill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/styleEditText"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Experiences"
+            android:layout_below="@id/tilSkill"
+            style="@style/styleTextInputLayout">
+            <EditText
+                android:id="@+id/etExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSubmitInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_below="@id/tilExperience"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:background="@drawable/rounded_button_background"
+            android:textAllCaps="false"
+            android:textColor="@color/white_full"
+            android:textSize="@dimen/text_regular_2x"/>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

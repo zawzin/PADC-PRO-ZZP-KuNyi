@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="@dimen/margin_medium"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    app:cardElevation="@dimen/margin_small"
+    app:cardCornerRadius="@dimen/margin_small"
+    android:foreground="@drawable/ripple_primary">
+
+    <Button
+        android:id="@+id/btnInterest"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:foreground="@drawable/ic_add_black_24dp"
+        android:foregroundTint="@color/white_full"
+        android:layout_gravity="right"
+        android:background="@drawable/noted_background"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium">
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvJobShortDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Teach English Special"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:textSize="@dimen/text_regular_3x"
+            android:textColor="@color/primary_text"
+            app:fontFamily="sans-serif-condensed" />
+
+        <TextView
+            android:id="@+id/tvJobSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salary : 3000"
+            android:layout_below="@id/tvJobShortDesc"
+            style="@style/jobMainAttr"/>
+
+        <TextView
+            android:id="@+id/tvJobDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="per month"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_toRightOf="@id/tvJobSalary"
+            android:layout_below="@id/tvJobShortDesc"
+            style="@style/jobMainAttr"/>
+
+        <TextView
+            android:id="@+id/tvJobLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location : Thingangyu"
+            android:layout_below="@id/tvJobSalary"
+            style="@style/jobMainAttr"/>
+
+        <TextView
+            android:id="@+id/tvJobClosedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Closed date : 2017-09-02"
+            android:layout_below="@id/tvJobLocation"
+            style="@style/jobMainAttr"/>
+
+        <Button
+            android:id="@+id/btnJobApply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:foreground="@drawable/ripple_white"
+            android:background="@drawable/rounded_button_background"
+            android:layout_below="@id/tvJobClosedDate"
+            android:padding="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:textColor="@color/white_full"
+            android:onClick="onTagApply"/>
+
+        <TextView
+            android:id="@+id/tvJopAppliers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 persons applied"
+            android:layout_alignBottom="@id/btnJobApply"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_small"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
+            android:textSize="@dimen/text_regular"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

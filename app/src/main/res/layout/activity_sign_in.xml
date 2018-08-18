@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingTop="@dimen/margin_medium_2">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            style="@style/styleTextInputLayout">
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/styleEditText" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:layout_below="@id/tilEmail"
+            style="@style/styleTextInputLayout">
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                style="@style/styleEditText"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSignInEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign in with email"
+            android:layout_below="@id/tilPassword"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:background="@drawable/apply_button_rounded_bg"
+            android:textAllCaps="false"
+            android:textColor="@color/white_full"
+            android:textSize="@dimen/text_regular_2x"/>
+        <TextView
+            android:id="@+id/lblOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or"
+            android:layout_below="@id/btnSignInEmail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/text_regular"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_alignBaseline="@id/lblOr"
+            android:layout_toRightOf="@id/lblOr"
+            android:layout_marginLeft="@dimen/margin_medium_2"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_alignBaseline="@id/lblOr"
+            android:layout_toLeftOf="@id/lblOr"
+            android:layout_marginRight="@dimen/margin_medium_2"/>
+
+        <Button
+            android:id="@+id/btnSignInGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sign in with Google"
+            android:layout_below="@id/lblOr"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:background="@drawable/rounded_button_background"
+            android:textColor="@color/white_full"
+            android:textSize="@dimen/text_regular_2x"
+            android:textAllCaps="false"/>
+        <TextView
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_account"
+            android:layout_below="@id/btnSignInGoogle"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:gravity="right"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/secondary_text"/>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
